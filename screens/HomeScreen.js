@@ -35,7 +35,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           {/* <DevelopmentModeNotice /> */}
 
-          <Text style={styles.getStartedText}>Welcome to your home page!</Text>
+          {/* <Text style={styles.getStartedText}>Welcome to your home page!</Text> */}
 
           {/* <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
