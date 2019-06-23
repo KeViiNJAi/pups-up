@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import {
   createStackNavigator,
-  createBottomTabNavigator,
+  createBottomTabNavigator
 } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
@@ -11,7 +11,7 @@ import MapsScreen from '../screens/MapsScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: HomeScreen
 });
 
 HomeStack.navigationOptions = {
@@ -25,11 +25,11 @@ HomeStack.navigationOptions = {
           : 'md-information-circle'
       }
     />
-  ),
+  )
 };
 
 const MapsStack = createStackNavigator({
-  Map: MapsScreen,
+  Map: MapsScreen
 });
 
 MapsStack.navigationOptions = {
@@ -39,11 +39,11 @@ MapsStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-map' : 'md-map'}
     />
-  ),
+  )
 };
 
 const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: SettingsScreen
 });
 
 SettingsStack.navigationOptions = {
@@ -53,11 +53,11 @@ SettingsStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
     />
-  ),
+  )
 };
 
 export default createBottomTabNavigator({
   HomeStack,
   MapsStack,
-  SettingsStack,
+  SettingsStack
 });
