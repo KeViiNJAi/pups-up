@@ -3,16 +3,6 @@ import MapView, { Callout, Marker, AnimatedRegion, Animated } from 'react-native
 import { Text, StyleSheet, Dimensions, View } from 'react-native';
 
 export default class Map extends Component {
-  // getInitialState(){
-  //   return {
-  //     region: new AnimatedRegion({
-  //       latitude: 40.704850,
-  //       longitude: -74.009293,
-  //       latitudeDelta: 0.0922,
-  //       longitudeDelta: 0.0421,
-  //     })
-  //   }
-  // }
 
   render() {
     return (
@@ -20,24 +10,22 @@ export default class Map extends Component {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 40.70485,
-            longitude: -74.009293,
+            latitude: 40.726456,
+            longitude: -73.981069,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
         >
           <Marker
             coordinate={{
-              latitude: 40.70485,
-              longitude: -74.009293
+              latitude: 40.726456,
+              longitude: -73.981069
             }}
           >
             <Callout>
-              <Text>FSA NYC: No dogs allowed without documentation.</Text>
+              <Text>Tompkins Square Dog Run</Text>
+              <Text>There are 17 dogs at the park right now!</Text>
             </Callout>
-            {/* <View style={{ backgroundColor: 'red', padding: 10 }}>
-              <Text>NY</Text>
-            </View> */}
           </Marker>
         </MapView>
       </View>
@@ -54,7 +42,6 @@ const styles = StyleSheet.create({
     width: width
   },
   map: {
-    //  ...StyleSheet.absoluteFillObject,
     left: 0,
     right: 0,
     top: 0,

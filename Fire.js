@@ -34,10 +34,6 @@ class Fire {
     return (firebase.auth().currentUser || {}).uid;
   }
 
-  // get ref() {
-  //   return firebase.database().ref('messages')
-  // }
-
   on = callback =>
     this.ref
       .limitToLast(20)
@@ -53,20 +49,4 @@ class Fire {
 }
 
 Fire.shared = new Fire()
-
-var database = firebase.database();
-
-// console.log('Firebase:', database.ref('/pups-up/'))
-
-// firebase.database().ref('users/').once('value')
-
-firebase.database().ref('/User1/').once('value')
-.then(function(snapshot) {
-  console.log(snapshot.val())
-  // var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-})
-
-// console.log('snapshot', snapshot.val())
-
-
 export default Fire;
