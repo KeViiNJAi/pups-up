@@ -30,10 +30,9 @@ export default class ProfilePage extends Component {
     }
     return (
       <View style={styles.container}>
-        <ScrollView>
           <View style={styles.container}>
             <Image
-              source={require('../assets/images/theo.jpg')}
+              source={require('../assets/images/theo-profile.jpeg')}
               style={styles.profileImg}
             />
 
@@ -44,7 +43,6 @@ export default class ProfilePage extends Component {
             <Text style={styles.userInfoText}>Home: {this.state.users.user1.city}</Text>
             <Text style={styles.userInfoText}>Friends: {this.state.pets.pet2.name}</Text>
           </View>
-        </ScrollView>
       </View>
     );
   }

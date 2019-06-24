@@ -12,7 +12,7 @@ export default function MapsScreen() {
 }
 
 MapsScreen.navigationOptions = {
-  title: 'Map',
+  title: 'Dog Parks',
 };
 
 const styles = StyleSheet.create({

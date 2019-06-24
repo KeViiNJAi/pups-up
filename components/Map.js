@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapView from 'react-native-maps';
-import { Text, StyleSheet, Dimensions, View } from 'react-native';
+import { StyleSheet, Dimensions, View } from 'react-native';
 import firebase from 'firebase';
 import Markers from './MarkersTest';
 
@@ -14,7 +14,6 @@ export default class Map extends Component {
       .once('value')
       .then(snapshot => {
         this.setState(snapshot.val());
-        // console.log('location component', snapshot.val())
       });
   }
 

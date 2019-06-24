@@ -16,7 +16,6 @@ export default class Markers extends Component {
       .once('value')
       .then(snapshot => {
         this.setState(snapshot.val());
-        // console.log('location component', snapshot.val())
       });
   }
 
