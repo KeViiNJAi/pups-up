@@ -9,13 +9,13 @@ class Fire {
   init = () => {
     if (!firebase.apps.length) {
       firebase.initializeApp({
-        apiKey: 'AIzaSyChVlMDT59P6Jixl-nRn4jV9i21jab4aqc',
-  authDomain: 'pups-up.firebaseapp.com',
-  databaseURL: 'https://pups-up.firebaseio.com',
-  projectId: 'pups-up',
-  storageBucket: 'pups-up.appspot.com',
-  messagingSenderId: '852272247058',
-  appId: '1:852272247058:web:0ef0d2a754c82d89'
+        apiKey: '',
+  authDomain: '.firebaseapp.com',
+  databaseURL: 'https://.firebaseio.com',
+  projectId: '',
+  storageBucket: '.appspot.com',
+  messagingSenderId: '',
+  appId: ''
       })
     }
   }
