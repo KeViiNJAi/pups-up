@@ -20,7 +20,7 @@ export default class ProfilePage extends Component {
       .once('value')
       .then((snapshot) => {
         this.setState(snapshot.val());
-        console.log(snapshot.val())
+        // console.log(snapshot.val())
       });
     }
 

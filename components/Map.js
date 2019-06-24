@@ -1,32 +1,41 @@
 import React, { Component } from 'react';
-import MapView, { Callout, Marker, AnimatedRegion, Animated } from 'react-native-maps';
+import MapView from 'react-native-maps';
 import { Text, StyleSheet, Dimensions, View } from 'react-native';
+import firebase from 'firebase';
+import Markers from './MarkersTest';
 
 export default class Map extends Component {
+  state = {};
+
+  componentDidMount() {
+    firebase
+      .database()
+      .ref('/')
+      .once('value')
+      .then(snapshot => {
+        this.setState(snapshot.val());
+        // console.log('location component', snapshot.val())
+      });
+  }
 
   render() {
+    console.log(`this state location in render`, this.state.location);
+    if (!this.state.location) {
+      return null;
+    }
     return (
       <View style={styles.container}>
+        {console.log('inside marker return')}
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 40.726456,
-            longitude: -73.981069,
+            latitude: 40.704903,
+            longitude: -74.009157,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421
           }}
         >
-          <Marker
-            coordinate={{
-              latitude: 40.726456,
-              longitude: -73.981069
-            }}
-          >
-            <Callout>
-              <Text>Tompkins Square Dog Run</Text>
-              <Text>There are 17 dogs at the park right now!</Text>
-            </Callout>
-          </Marker>
+          <Markers />
         </MapView>
       </View>
     );
