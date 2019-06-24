@@ -32,7 +32,7 @@ export default class ProfilePage extends Component {
       <View style={styles.container}>
           <View style={styles.container}>
             <Image
-              source={require('../assets/images/theo-profile.jpeg')}
+              source={require('../assets/images/theo-profile-pic.png')}
               style={styles.profileImg}
             />
 
